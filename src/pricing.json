@@ -1,0 +1,22 @@
+{
+  "_note": "1M トークンあたりの USD。価格は頻繁に変わるので、使う前に必ず各社の公式ページで確認して上書きすること。ここにある値は見積もりの初期値にすぎない。",
+  "_updated": "2026-11-11",
+  "_source": "各社の公開価格ページ（要確認）",
+  "_schema": { "input": "入力 1M トークンあたり USD", "output": "出力 1M トークンあたり USD", "tier": "capable | balanced | cheap" },
+  "models": {
+    "claude-opus-5":    { "input": 15.00, "output": 75.00, "tier": "capable" },
+    "claude-sonnet-5":  { "input": 3.00,  "output": 15.00, "tier": "balanced" },
+    "claude-haiku-4":   { "input": 0.80,  "output": 4.00,  "tier": "cheap" },
+    "gemini-4-carbon":  { "input": 2.50,  "output": 15.00, "tier": "capable" },
+    "gemini-4-argon":   { "input": 0.30,  "output": 2.50,  "tier": "cheap" },
+    "gpt-5":            { "input": 1.25,  "output": 10.00, "tier": "capable" },
+    "gpt-5-mini":       { "input": 0.25,  "output": 2.00,  "tier": "cheap" },
+    "mock":             { "input": 0.00,  "output": 0.00,  "tier": "cheap" }
+  },
+  "downgrade": {
+    "claude-opus-5": "claude-sonnet-5",
+    "claude-sonnet-5": "claude-haiku-4",
+    "gemini-4-carbon": "gemini-4-argon",
+    "gpt-5": "gpt-5-mini"
+  }
+}

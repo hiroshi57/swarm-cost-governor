@@ -1,0 +1,11 @@
+{
+  "name": "swarm-cost-governor",
+  "version": "0.1.0",
+  "description": "エージェント台数 × トークンの予算ガード。走らせる前に見積もり、走っている間に止める",
+  "type": "module",
+  "main": "src/index.mjs",
+  "bin": { "swarm-cost": "src/cli.mjs" },
+  "scripts": { "test": "node --test \"test/*.test.mjs\"" },
+  "license": "MIT",
+  "engines": { "node": ">=20" }
+}
